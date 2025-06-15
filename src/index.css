@@ -110,3 +110,23 @@ mark {
 [contenteditable] u {
   text-decoration: underline;
 }
+/* Fix text direction issues */
+[contenteditable], 
+.editor, 
+.rich-text-editor,
+.text-editor,
+textarea,
+input[type="text"] {
+  direction: ltr !important;
+  unicode-bidi: normal !important;
+  text-align: left !important;
+  writing-mode: horizontal-tb !important;
+}
+
+/* Additional editor fixes */
+.ql-editor, 
+.tox-edit-area,
+.ProseMirror {
+  direction: ltr !important;
+  text-align: left !important;
+}
